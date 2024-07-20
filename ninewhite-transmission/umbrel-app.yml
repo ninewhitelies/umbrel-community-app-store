@@ -5,7 +5,7 @@ tagline: A fast, easy and free BitTorrent client
 icon: https://svgur.com/i/mvA.svg
 category: networking
 version: "4.0.5"
-port: 9091
+port: 4000
 description: >-
     None
 
@@ -20,7 +20,7 @@ gallery:
 releaseNotes: >-
   Add what's new in the latest version of your app here.
 dependencies: []
-path: "/transmission/web/"
+path: ""
 defaultUsername: "admin"
 defaultPassword: "adminadmin"
 torOnly: false
