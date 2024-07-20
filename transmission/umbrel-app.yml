@@ -1,11 +1,11 @@
 manifestVersion: 1
 id: transmission
-name: Transmission plus VPN
-tagline: A transmission client secured by OpenVPN
+name: Transmission
+tagline: A fast, easy and free BitTorrent client
 icon: https://svgur.com/i/mvA.svg
-category: Development
-version: "1.0.0"
-port: 4000
+category: networking
+version: "4.0.5"
+port: 9091
 description: >-
     None
 
@@ -20,8 +20,9 @@ gallery:
 releaseNotes: >-
   Add what's new in the latest version of your app here.
 dependencies: []
-path: ""
+path: "/transmission/web/"
 defaultUsername: "admin"
 defaultPassword: "adminadmin"
+torOnly: false
 permissions:
     - STORAGE_DOWNLOADS
