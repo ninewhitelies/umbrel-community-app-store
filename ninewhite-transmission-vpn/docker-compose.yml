@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+    
+    app_proxy:
+      environment:
+        APP_HOST: transmission_server_1
+        APP_PORT: 9091
+
+    transmission-openvpn:
+        cap_add:
+            - NET_ADMIN
+
+        volumes:
+            - ${APP_DATA_DIR}/data/data:/data
+            - ${APP_DATA_DIR}/data/config:/config
+            - ${UMBREL_ROOT}/data/storage/downloads:/downloads
+
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - OPENVPN_PROVIDER=SURFSHARK
+            - OPENVPN_CONFIG=de-fra_udp
+            - LOCAL_NETWORK=192.168.0.0/16
+            - TRANSMISSION_WEB_UI=flood-for-transmission
+
+        secrets:
+            - openvpn_creds
+
+secrets:
+    openvpn_creds:
+        file: ${APP_DATA_DIR}/openvpn/openvpn_creds
+
+        logging:
+            driver: json-file
+            options:
+                max-size: 10m
+
+        ports:
+            - '9091:9091'
+
+        image: haugene/transmission-openvpn
+
+        restart: always
