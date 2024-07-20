@@ -26,10 +26,6 @@ services:
         secrets:
             - openvpn_creds
 
-secrets:
-    openvpn_creds:
-        file: ${APP_DATA_DIR}/openvpn/openvpn_creds
-
         logging:
             driver: json-file
             options:
@@ -41,3 +37,9 @@ secrets:
         image: haugene/transmission-openvpn
 
         restart: always
+
+
+
+secrets:
+    openvpn_creds:
+        file: ${APP_DATA_DIR}/openvpn/openvpn_creds
