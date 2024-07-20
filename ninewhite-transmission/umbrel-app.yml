@@ -1,10 +1,10 @@
 manifestVersion: 1
-id: ninewhite-transmission
+id: ninewhite-transmission-vpn
 name: Transmission
 tagline: A fast, easy and free BitTorrent client
 icon: https://svgur.com/i/mvA.svg
 category: networking
-version: "4.0.5"
+version: "4.0.6"
 port: 4000
 description: >-
     None

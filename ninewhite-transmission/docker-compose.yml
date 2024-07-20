@@ -3,7 +3,7 @@ services:
     
     app_proxy:
       environment:
-        APP_HOST: transmission_server_1
+        APP_HOST: ninewhite-transmission_server_1
         APP_PORT: 9091
 
     transmission-openvpn:
